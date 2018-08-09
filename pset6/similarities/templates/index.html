@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <!-- TODO -->
+    <form  action ="{{url_for('score')}}"  method = "POST">
+        <div class= "form-group">
+            <input class = 'form-control' name= "string1" type = "text" placeholder= "Enter String">
+            <input class = 'form-control' name= "string2" type= "text" placeholder= "Enter Another String">
+
+        </div>
+        <div class = form-group>
+            <button class = "btn btn-primary">Compare them</button>
+        </div>
+    </form>
+{% endblock %}

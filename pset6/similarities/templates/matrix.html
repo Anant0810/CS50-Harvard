@@ -1,0 +1,39 @@
+<!-- TODO -->
+
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            {% for char in s2 %}
+                <th>{{char}}</th>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            {% for char in range((s2)|length + 1) %}
+                <th>{{char}}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th></th>
+            <th>0</th>
+            {% for row in matrix[0] %}
+                <th>{{row[0]}}</th>
+            {% endfor %}
+        </tr>
+        {% for col in range(s1|length) %}
+            <tr>
+                <th>{{s1[col]}}</th>
+                <th>{{col + 1}}</th>
+                {% for data in matrix[col + 1] %}
+                    <td>{{data[0]}}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

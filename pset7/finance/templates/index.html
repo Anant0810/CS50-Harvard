@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Shares</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            {% for i in range(count) %}
+                <tr>
+                    {% for item in information[i] %}
+                    <td>{{information[i][item]}}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+
+        <tr>
+            <td>Cash</td>
+            <td> </td>
+            <td> </td>
+            <td>{{cash}}</td>
+        </tr>
+    </table>
+{% endblock %}

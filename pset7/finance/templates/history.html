@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Particulars</th>
+                    <th>Symbol</th>
+                    <th>Price</th>
+                    <th>Shares</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            {% for i in range(count) %}
+            <tr>
+                {% for item in info[i] %}
+                <td>{{info[i][item]}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+    </table>
+{% endblock %}
